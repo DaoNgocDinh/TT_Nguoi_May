@@ -3,21 +3,17 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home', ['guest' => true]);
+})->name('home');
 
-Route::get('/global_layout/navbar', function () {
-    return view('global_layout.navbar');
-});
+Route::get('/chuyen-tien', function () {
+    return view('wallet.transfer');
+})->name('wallet.transfer');
 
-Route::get('/global_layout/footer', function () {
-    return view('global_layout.footer');
-});
+Route::get('/nap-tien', function () {
+    return view('wallet.deposit');
+})->name('wallet.deposit');
 
-Route::get('/global_layout/header', function () {
-    return view('global_layout.header');
-});
-
-Route::get('/global_layout/body', function () {
-    return view('global_layout.body');
-});
+Route::get('/rut-tien', function () {
+    return view('wallet.withdraw');
+})->name('wallet.withdraw');

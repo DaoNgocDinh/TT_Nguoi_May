@@ -1,134 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+@php
+    $services = [
+        ['route' => 'wallet.transfer', 'icon' => 'ChuyenTien.png', 'label' => 'Chuyển tiền'],
+        ['route' => 'wallet.deposit', 'icon' => 'NapTien.png', 'label' => 'Nạp tiền'],
+        ['route' => 'wallet.withdraw', 'icon' => 'RutTien.png', 'label' => 'Rút tiền'],
+        ['route' => null, 'icon' => 'ThanhToanHoaDon.png', 'label' => 'Thanh toán'],
+        ['route' => null, 'icon' => 'ChiTieu.png', 'label' => 'Quản lý chi tiêu'],
+        ['route' => null, 'icon' => 'Hitory_money.png', 'label' => 'Lịch sử giao dịch'],
+        ['route' => null, 'icon' => 'Money_Phone.png', 'label' => 'Nạp tiền điện thoại'],
+        ['route' => null, 'icon' => 'QlyQuy.png', 'label' => 'Quản lý quỹ'],
+        ['route' => null, 'icon' => 'HuChiTieu.png', 'label' => 'Hũ chi tiêu'],
+    ];
+@endphp
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <title></title>
-</head>
+<header class="service-header">
+    <h1>Tiện ích và dịch vụ</h1>
+    <p>Ứng dụng tài chính ĐTY giúp bạn có thể tiếp cận nhiều dịch vụ tài chính đa dạng với chi phí hợp lý, để bạn làm được nhiều hơn với tiền.</p>
 
-<body>
-    <div class="h-[267px] bg-gradient-to-r from-[#A0185F] to-[#D91773] flex flex-col items-center">
+    <div class="service-strip">
+        <button class="round-nav" type="button" aria-label="Trước">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
 
-        <h2 class="text-[32px] font-bold text-white mt-2">
-            Tiện ích và dịch vụ
-        </h2>
+        <div class="service-list">
+            @foreach ($services as $service)
+                @php
+                    $isActive = $service['route'] && request()->routeIs($service['route']);
+                    $href = $service['route'] ? route($service['route']) : '#';
+                @endphp
 
-        <p class="text-[23px] text-white text-center">
-            Ứng dụng tài chính ĐTY giúp bạn có thể tiếp cận nhiều dịch vụ tài chính đa dạng
-            với chi phí hợp lý, để bạn làm <br>
-            được nhiều hơn với tiền.
-        </p>
-
-        <div class="flex items-center gap-8 mt-6">
-
-            <button class="w-[40px] h-[40px] rounded-full bg-white shadow-md flex items-center justify-center">
-                <i class="fa-solid fa-chevron-left text-xl text-[#A0185F]"></i>
-            </button>
-
-            <div class="flex gap-6">
-
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/ChuyenTien.png') }}" class="w-[43px] h-[43px]">
-                    </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Chuyển<br>tiền
-                    </span>
-                </div>
-
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/NapTien.png') }}" class="w-[43px] h-[43px]">
-                    </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Nạp tiền
-                    </span>
-                </div>
-
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/RutTien.png') }}" class="w-[43px] h-[43px]">
-                    </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Rút tiền
-                    </span>
-                </div>
-
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/ThanhToanHoaDon.png') }}" class="w-[43px] h-[43px]">
-                    </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Thanh<br>toán
-                    </span>
-                </div>
-
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/ChiTieu.png') }}" class="w-[43px] h-[43px]">
-                    </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Quản lý<br>chi tiêu
-                    </span>
-                </div>
-
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/Hitory_money.png') }}" class="w-[43px] h-[43px]">
-                    </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Lịch sử<br>giao dịch
-                    </span>
-                </div>
-
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/Money_Phone.png') }}" class="w-[43px] h-[43px]">
-                    </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Nạp tiền<br>điện thoại
-                    </span>
-                </div>
-
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/QlyQuy.png') }}" class="w-[43px] h-[43px]">
-                    </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Quản lý<br>quỹ
-                    </span>
-                </div>
-
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/HuChiTieu.png') }}" class="w-[43px] h-[43px]">
-                    </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Hũ chi<br>tiêu
-                    </span>
-                </div>
-
-            </div>
-
-            <button class="w-[40px] h-[40px] rounded-full bg-[#C31368] shadow-md flex items-center justify-center">
-                <i class="fa-solid fa-chevron-right text-xl text-white"></i>
-            </button>
-
+                <a class="service-card {{ $isActive ? 'active' : '' }}" href="{{ $href }}">
+                    <img src="{{ asset('images/icons/' . $service['icon']) }}" alt="">
+                    <span>{{ $service['label'] }}</span>
+                </a>
+            @endforeach
         </div>
 
+        <button class="round-nav dark" type="button" aria-label="Sau">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
     </div>
-</body>
-
-</html>
+</header>

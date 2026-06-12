@@ -11,66 +11,53 @@
 
 </html>
 
-<footer class="bg-slate-900 text-white mt-10 w-[1920px] h-[125px]">
-    <div class="max-w-7xl mx-auto px-8 py-8">
+<footer class="bg-[#A0185F] text-white h-[125px] w-full">
+    <div class="h-full px-10 flex flex-col justify-center">
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- 4 cột trên cùng -->
+        <div class="grid grid-cols-4 gap-8 text-[18px]">
 
-            <div>
-                <div class="flex items-center gap-3 mb-3">
-                    <h3 class="text-lg font-bold">
-                        Hợp tác doanh nghiệp
-                    </h3>
-                </div>
+            <div class="w-full text-center">
+                <h3 class="font-bold mb-2">
+                    Hợp tác doanh nghiệp
+                </h3>
 
-                <p class="text-gray-300 text-sm">
-                    Hotline: 0904606689(Phí 1.000đ/phút)<br>
+                <p class="text-gray-300">
+                    Hotline: 0904606689<br>
                     Email: vidientuthongminh@DTY.vn
                 </p>
             </div>
 
-            <!-- Liên kết -->
-            <div>
-                <h3 class="text-lg font-semibold mb-3">
-                    Liên kết
+            <div class="w-full text-center">
+                <h3 class="font-bold mb-2">
+                    Chăm sóc khách hàng
                 </h3>
 
-                <ul class="space-y-2 text-gray-300">
-                    <li><a href="#" class="hover:text-pink-400">Trang chủ</a></li>
-                    <li><a href="#" class="hover:text-pink-400">Quản lý quỹ</a></li>
-                    <li><a href="#" class="hover:text-pink-400">Thành viên</a></li>
-                    <li><a href="#" class="hover:text-pink-400">Báo cáo</a></li>
-                </ul>
+                <p class="text-gray-300">
+                    Hà Nội: Trường Đại học Thủy Lợi<br>
+                    175 Tây Sơn, Đống Đa
+                </p>
             </div>
 
-            <!-- Thông tin -->
-            <div>
-                <h3 class="text-lg font-semibold mb-3">
-                    Liên hệ
+            <div class="w-full text-center">
+                <h3 class="font-bold mb-2">
+                    Về chúng tôi
                 </h3>
 
-                <div class="space-y-2 text-gray-300">
-                    <p>
-                        <i class="fas fa-envelope mr-2"></i>
-                        admin@gmail.com
-                    </p>
-
-                    <p>
-                        <i class="fas fa-phone mr-2"></i>
-                        0123 456 789
-                    </p>
-
-                    <p>
-                        <i class="fas fa-location-dot mr-2"></i>
-                        Hà Nội, Việt Nam
-                    </p>
-                </div>
+                <p class="text-gray-300">
+                    Trợ thủ tài chính<br>
+                    An toàn - bảo mật
+                </p>
             </div>
 
-        </div>
+            <div class="w-full">
+                <img src="{{ asset('images/logo_bgr_pink.jpg') }}" alt="Logo" class="w-[50px] h-[50px] mx-auto">
 
-        <div class="border-t border-slate-700 mt-8 pt-4 text-center text-sm text-gray-400">
-            © 2026 Quản Lý Quỹ. All rights reserved.
+                <p class="text-gray-300 text-center text-[15px]">
+                    CÔNG TY CỔ PHẦN DỊCH VỤ<br>DI ĐỘNG TRỰC TIẾP
+                </p>
+            </div>
+
         </div>
 
     </div>

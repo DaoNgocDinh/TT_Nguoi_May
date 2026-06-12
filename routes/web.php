@@ -14,3 +14,7 @@ Route::get('/global_layout/footer', function () {
     return view('global_layout.footer');
 });
 
+Route::get('/global_layout/header', function () {
+    return view('global_layout.header');
+});
+

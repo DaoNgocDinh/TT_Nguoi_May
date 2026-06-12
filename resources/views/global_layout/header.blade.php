@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <title></title>
 </head>
 
@@ -30,8 +33,7 @@
 
             <div class="flex gap-6">
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
+                <div class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
                     <div class="h-[45px] flex items-center">
                         <img src="{{ asset('images/icons/ChuyenTien.png') }}" class="w-[43px] h-[43px]">
                     </div>
@@ -40,8 +42,7 @@
                     </span>
                 </div>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
+                <div class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
                     <div class="h-[45px] flex items-center">
                         <img src="{{ asset('images/icons/NapTien.png') }}" class="w-[43px] h-[43px]">
                     </div>
@@ -50,8 +51,7 @@
                     </span>
                 </div>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
+                <div class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
                     <div class="h-[45px] flex items-center">
                         <img src="{{ asset('images/icons/RutTien.png') }}" class="w-[43px] h-[43px]">
                     </div>
@@ -60,8 +60,7 @@
                     </span>
                 </div>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
+                <div class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
                     <div class="h-[45px] flex items-center">
                         <img src="{{ asset('images/icons/ThanhToanHoaDon.png') }}" class="w-[43px] h-[43px]">
                     </div>
@@ -70,8 +69,7 @@
                     </span>
                 </div>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
+                <div class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
                     <div class="h-[45px] flex items-center">
                         <img src="{{ asset('images/icons/ChiTieu.png') }}" class="w-[43px] h-[43px]">
                     </div>
@@ -80,8 +78,7 @@
                     </span>
                 </div>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
+                <div class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
                     <div class="h-[45px] flex items-center">
                         <img src="{{ asset('images/icons/Hitory_money.png') }}" class="w-[43px] h-[43px]">
                     </div>
@@ -90,8 +87,7 @@
                     </span>
                 </div>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
+                <div class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
                     <div class="h-[45px] flex items-center">
                         <img src="{{ asset('images/icons/Money_Phone.png') }}" class="w-[43px] h-[43px]">
                     </div>
@@ -100,8 +96,7 @@
                     </span>
                 </div>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
+                <div class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
                     <div class="h-[45px] flex items-center">
                         <img src="{{ asset('images/icons/QlyQuy.png') }}" class="w-[43px] h-[43px]">
                     </div>
@@ -110,8 +105,7 @@
                     </span>
                 </div>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
+                <div class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
                     <div class="h-[45px] flex items-center">
                         <img src="{{ asset('images/icons/HuChiTieu.png') }}" class="w-[43px] h-[43px]">
                     </div>

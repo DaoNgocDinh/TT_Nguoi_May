@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\QuyController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -21,3 +23,5 @@ Route::get('/global_layout/header', function () {
 Route::get('/global_layout/body', function () {
     return view('global_layout.body');
 });
+
+Route::get('/QuanLyQuy', [QuyController::class, 'index']);

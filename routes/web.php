@@ -18,3 +18,6 @@ Route::get('/global_layout/header', function () {
     return view('global_layout.header');
 });
 
+Route::get('/global_layout/body', function () {
+    return view('global_layout.body');
+});

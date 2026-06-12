@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="w-[1920px] h-[267px] bg-gradient-to-r from-[#A0185F] to-[#D91773] flex flex-col items-center">
+    <div class="h-[267px] bg-gradient-to-r from-[#A0185F] to-[#D91773] flex flex-col items-center">
 
         <h2 class="text-[32px] font-bold text-white mt-2">
             Tiện ích và dịch vụ

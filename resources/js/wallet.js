@@ -129,11 +129,13 @@ function withdrawFee(amount) {
 function updateWithdrawSummary() {
     const amount = toNumber(document.getElementById('withdraw-amount')?.value);
     const fee = withdrawFee(amount);
+    const amountText = document.getElementById('withdraw-summary-amount');
+    const feeText = document.getElementById('withdraw-summary-fee');
+    const receiveText = document.getElementById('withdraw-summary-receive');
 
-    document.getElementById('withdraw-summary-amount')?.textContent = formatMoney(amount);
-    document.getElementById('withdraw-summary-fee')?.textContent = formatMoney(fee);
-    document.getElementById('withdraw-summary-receive')?.textContent =
-        formatMoney(Math.max(amount - fee, 0));
+    if (amountText) amountText.textContent = formatMoney(amount);
+    if (feeText) feeText.textContent = formatMoney(fee);
+    if (receiveText) receiveText.textContent = formatMoney(Math.max(amount - fee, 0));
 }
 
 function validateWithdraw() {

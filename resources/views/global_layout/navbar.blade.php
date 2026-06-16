@@ -9,6 +9,7 @@
     <title>Navbar</title>
 </head>
 
+
 <body>
 
     <nav class="h-[80px] bg-white shadow-lg">

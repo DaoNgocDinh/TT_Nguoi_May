@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title></title>
 </head>
 
@@ -32,11 +33,11 @@
             </button>
 
             <div class="flex gap-6">
-                <a href="#">
+                <a href="/chuyen-tien">
                     <div
-                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        class="service-card {{ request()->is('chuyen-tien') ? 'service-card-active' : '' }} w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
                         <div class="h-[45px] flex items-center">
-                            <img src="{{ asset('images/icons/ChuyenTien.png') }}"
+                            <img src="{{ request()->is('chuyen-tien') ? asset('images/icons/ChuyenTienhover.png') : asset('images/icons/ChuyenTien.png') }}"
                                 data-normal="{{ asset('images/icons/ChuyenTien.png') }}"
                                 data-hover="{{ asset('images/icons/ChuyenTienhover.png') }}"
                                 class="service-icon w-[43px] h-[43px]">
@@ -47,11 +48,11 @@
                     </div>
                 </a>
 
-                <a href="#">
+                <a href="/nap-tien">
                     <div
-                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        class="service-card {{ request()->is('nap-tien') ? 'service-card-active' : '' }} w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
                         <div class="h-[45px] flex items-center">
-                            <img src="{{ asset('images/icons/NapTien.png') }}"
+                            <img src="{{ request()->is('nap-tien') ? asset('images/icons/NapTienhover.png') : asset('images/icons/NapTien.png') }}"
                                 data-normal="{{ asset('images/icons/NapTien.png') }}"
                                 data-hover="{{ asset('images/icons/NapTienhover.png') }}"
                                 class="service-icon w-[43px] h-[43px]">
@@ -62,11 +63,11 @@
                     </div>
                 </a>
 
-                <a href="#">
+                <a href="/rut-tien">
                     <div
-                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        class="service-card {{ request()->is('rut-tien') ? 'service-card-active' : '' }} w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
                         <div class="h-[45px] flex items-center">
-                            <img src="{{ asset('images/icons/RutTien.png') }}"
+                            <img src="{{ request()->is('rut-tien') ? asset('images/icons/RutTienhover.png') : asset('images/icons/RutTien.png') }}"
                                 data-normal="{{ asset('images/icons/RutTien.png') }}"
                                 data-hover="{{ asset('images/icons/RutTienhover.png') }}"
                                 class="service-icon w-[43px] h-[43px]">
@@ -77,11 +78,11 @@
                     </div>
                 </a>
 
-                <a href="#">
+                <a href="/thanh-toan-hoa-don">
                     <div
-                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        class="service-card {{ request()->is('thanh-toan-hoa-don') ? 'service-card-active' : '' }} w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
                         <div class="h-[45px] flex items-center">
-                            <img src="{{ asset('images/icons/ThanhToanHoaDon.png') }}"
+                            <img src="{{ request()->is('thanh-toan-hoa-don') ? asset('images/icons/ThanhToanHoaDonhover.png') : asset('images/icons/ThanhToanHoaDon.png') }}"
                                 data-normal="{{ asset('images/icons/ThanhToanHoaDon.png') }}"
                                 data-hover="{{ asset('images/icons/ThanhToanHoaDonhover.png') }}"
                                 class="service-icon w-[43px] h-[43px]">
@@ -92,11 +93,11 @@
                     </div>
                 </a>
 
-                <a href="{{ route('quanlychitieu') }}">
+                <a href="/quan-ly-chi-tieu">
                     <div
-                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        class="service-card {{ request()->is('quan-ly-chi-tieu') ? 'service-card-active' : '' }} w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
                         <div class="h-[45px] flex items-center">
-                            <img src="{{ asset('images/icons/ChiTieu.png') }}"
+                            <img src="{{ request()->is('quan-ly-chi-tieu') ? asset('images/icons/ChiTieuhover.png') : asset('images/icons/ChiTieu.png') }}"
                                 data-normal="{{ asset('images/icons/ChiTieu.png') }}"
                                 data-hover="{{ asset('images/icons/ChiTieuhover.png') }}"
                                 class="service-icon w-[43px] h-[43px]">
@@ -107,7 +108,7 @@
                     </div>
                 </a>
 
-                <a href="#">
+                <a href="/lich-su-giao-dich">
                     <div
                         class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
                         <div class="h-[45px] flex items-center">
@@ -122,11 +123,11 @@
                     </div>
                 </a>
 
-                <a href="#">
+                <a href="/nap-tien-dien-thoai">
                     <div
-                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        class="service-card {{ request()->is('nap-tien-dien-thoai') ? 'service-card-active' : '' }} w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
                         <div class="h-[45px] flex items-center">
-                            <img src="{{ asset('images/icons/Money_Phone.png') }}"
+                            <img src="{{ request()->is('nap-tien-dien-thoai') ? asset('images/icons/Money_Phonehover.png') : asset('images/icons/Money_Phone.png') }}"
                                 data-normal="{{ asset('images/icons/Money_Phone.png') }}"
                                 data-hover="{{ asset('images/icons/Money_Phonehover.png') }}"
                                 class="service-icon w-[43px] h-[43px]">
@@ -152,11 +153,11 @@
                     </div>
                 </a>
 
-                <a href="{{ route('huchitieu') }}">
+                <a href="/hu-chi-tieu">
                     <div
-                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                         class="service-card {{ request()->is('hu-chi-tieu') ? 'service-card-active' : '' }} w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
                         <div class="h-[45px] flex items-center">
-                            <img src="{{ asset('images/icons/HuChiTieu.png') }}"
+                            <img src="{{ request()->is('hu-chi-tieu') ? asset('images/icons/HuChiTieuhover.png') : asset('images/icons/HuChiTieu.png') }}"
                                 data-normal="{{ asset('images/icons/HuChiTieu.png') }}"
                                 data-hover="{{ asset('images/icons/HuChiTieuhover.png') }}"
                                 class="service-icon w-[43px] h-[43px]">

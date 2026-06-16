@@ -1,18 +1,14 @@
-<body class="min-h-screen flex flex-col">
+@extends('global_layout.body')
 
-    @include('global_layout.navbar')
-    @include('global_layout.header')
-    
-    <main class="flex-1">
-        <div class="w-full">
-            <img src="{{ asset('images/poster2.png') }}" 
-                 alt="Banner" 
-                 class="w-full h-auto block">
-        </div>
-        
-        @yield('content')
-    </main>
+@section('content')
 
-    @include('global_layout.footer')
+<div class="w-full">
+    <img
+        src="{{ asset('images/poster2.png') }}"
+        alt="Banner"
+        class="w-full h-auto block">
+</div>
 
-</body>
+{{-- Nội dung trang chủ ở đây --}}
+
+@endsection

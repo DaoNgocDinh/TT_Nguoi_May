@@ -31,8 +31,8 @@
         @include('global_layout.footer')
     </div>
     <script>
-    {!! file_get_contents(resource_path('js/wallet.js')) !!}
-</script>
+        {!! file_get_contents(resource_path('js/wallet.js')) !!}
+    </script>
 </body>
 
 </html>

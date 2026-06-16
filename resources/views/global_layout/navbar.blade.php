@@ -15,12 +15,12 @@
 
 </html>
 
-<nav class="h-[90px] bg-white shadow-lg">
+<nav class="h-[80px] bg-white shadow-lg">
     <div class="h-full px-8 flex items-center justify-between">
 
         <div class="flex items-center gap-4">
             <img src="{{ asset('images/logo_bgr_pink.jpg') }}" alt="Logo"
-                class="h-[80x] w-[80px] border-2 border-[#707070] rounded-md">
+                class="h-[70px] w-[70px] border-2 border-[#707070] rounded-md">
 
             <div class="flex items-center gap-6 ml-8">
                 <a class="text-lg font-bold text-black">Dịch vụ</a>

@@ -6,15 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Ví điện tử ĐTY')</title>
     <style>
-        {!! preg_replace(
-            [
-                "/@import\s+'tailwindcss';\s*/",
-                "/@source\s+[^;]+;\s*/",
-                "/@theme\s*\{[\s\S]*?\}\s*/",
-            ],
-            '',
-            file_get_contents(resource_path('css/app.css'))
-        ) !!}
+        {!! file_get_contents(resource_path('css/app.css')) !!}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>

@@ -25,13 +25,13 @@ Route::view('/nap-tien-dien-thoai/xac-nhan', 'NapTienDienThoai&Data.xac-nhan');
 Route::view('/nap-tien-dien-thoai/xac-thuc', 'NapTienDienThoai&Data.xac-thuc');
 Route::view('/nap-tien-dien-thoai/thanh-cong', 'NapTienDienThoai&Data.thanh-cong');
 
-Route::get('/global_layout/navbar', function () {
-    return view('global_layout.navbar');
-});
+Route::get('/chuyen-tien', function () {
+    return view('wallet.transfer');
+})->name('wallet.transfer');
 
-Route::get('/global_layout/footer', function () {
-    return view('global_layout.footer');
-});
+Route::get('/nap-tien', function () {
+    return view('wallet.deposit');
+})->name('wallet.deposit');
 
 Route::get('/global_layout/header', function () {
     return view('global_layout.header');
@@ -51,3 +51,7 @@ Route::get('/quan-ly-chi-tieu', [ChiTieuController::class, 'quanLyChiTieu'])
 
 Route::get('/hu-chi-tieu', [ChiTieuController::class, 'huChiTieu'])
     ->name('huchitieu');
+
+    Route::get('/rut-tien', function () {
+    return view('wallet.withdraw');
+})->name('wallet.withdraw');

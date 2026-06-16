@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +10,10 @@
     <title></title>
 </head>
 
-<body>
-    <div class="h-[267px] bg-gradient-to-r from-[#A0185F] to-[#D91773] flex flex-col items-center">
+    <div class="service-strip">
+        <button class="round-nav" type="button" aria-label="Trước">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
 
         <h2 class="text-[32px] font-bold text-white mt-2">
             Tiện ích và dịch vụ
@@ -173,9 +172,11 @@
             <button class="w-[40px] h-[40px] rounded-full bg-[#C31368] shadow-md flex items-center justify-center">
                 <i class="fa-solid fa-chevron-right text-xl text-white"></i>
             </button>
-
         </div>
 
+        <button class="round-nav dark" type="button" aria-label="Sau">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
     </div>
 </body>
 

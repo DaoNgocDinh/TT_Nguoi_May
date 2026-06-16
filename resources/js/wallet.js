@@ -1,7 +1,13 @@
 const moneyFormatter = new Intl.NumberFormat('vi-VN');
 let activeDepositSource = 'bank';
-let selectedWithdrawBank = '';
 
+function getWalletBalance() {
+    return Number(
+        document
+            .getElementById('wallet-balance')
+            ?.dataset.balance || 0
+    );
+}
 function onlyDigits(value) {
     return String(value || '').replace(/\D/g, '');
 }
@@ -53,7 +59,13 @@ function updateTransferSummary() {
     if (!account || !amount) return;
 
     const value = toNumber(amount.value);
-    document.getElementById('transfer-summary-account').textContent = account.value.trim();
+    
+    const accountValue = account.value.trim();
+    document.getElementById('transfer-summary-account')
+        .textContent =
+            /^\d+$/.test(accountValue)
+                ? accountValue
+                : '';
     document.getElementById('transfer-summary-amount').textContent = formatMoney(value);
     document.getElementById('transfer-summary-total').textContent = formatMoney(value);
 }
@@ -65,6 +77,15 @@ function validateTransfer() {
 
     if (!account) {
         setError('transfer-account', '*Vui lòng nhập số điện thoại/ số tài khoản');
+        valid = false;
+    }
+    else if (!/^\d+$/.test(account)) {
+
+        setError(
+            'transfer-account',
+            '*Chỉ được nhập số'
+        );
+
         valid = false;
     }
 
@@ -139,12 +160,19 @@ function updateWithdrawSummary() {
 }
 
 function validateWithdraw() {
+    clearError('withdraw-amount');
+    clearError('withdraw-reason');
+    clearError('withdraw-bank');
     const amount = toNumber(document.getElementById('withdraw-amount')?.value);
     const reason = document.getElementById('withdraw-reason')?.value.trim();
     let valid = true;
 
     if (!amount) {
         setError('withdraw-amount', '*Vui lòng nhập số tiền rút');
+        valid = false;
+    }
+    if (amount > getWalletBalance()) {
+        setError('withdraw-amount', '*Số tiền rút vượt quá số dư hiện có');
         valid = false;
     }
 
@@ -202,7 +230,24 @@ function resetNewBankForm() {
         clearError(id);
     });
 }
+function getBankIcon(bankName) {
 
+    const name = bankName.toLowerCase();
+
+    if (name.includes('vietcombank')) {
+        return 'fa-shield-halved green';
+    }
+
+    if (name.includes('techcombank')) {
+        return 'fa-diamond red';
+    }
+
+    if (name.includes('mb')) {
+        return 'fa-star blue';
+    }
+
+    return 'fa-building-columns';
+}
 function addBankToList() {
     const bankName = document.getElementById('new-bank-name').value.trim();
     const bankNumber = document.getElementById('new-bank-number').value.trim();
@@ -210,7 +255,12 @@ function addBankToList() {
     const button = document.createElement('button');
     button.type = 'button';
     button.dataset.bank = `${bankName} ${maskedNumber}`;
-    button.innerHTML = `<i class="fa-solid fa-building-columns green"></i><span>${bankName}</span><strong>${maskedNumber}</strong>`;
+    const iconClass = getBankIcon(bankName);
+
+    button.innerHTML =
+        `<i class="fa-solid ${iconClass}"></i>
+        <span>${bankName}</span>
+        <strong>${maskedNumber}</strong>`;
 
     const addButton = document.getElementById('open-add-bank');
     addButton.before(button);
@@ -229,7 +279,6 @@ function bindMoneyInputs() {
     document.querySelectorAll('input[inputmode="numeric"]').forEach((input) => {
         input.addEventListener('input', () => {
             if (input.id.includes('amount')) {
-                console.log("Đang nhập:", input.id);
                 formatInputMoney(input);
             }
             clearError(input.id);
@@ -242,7 +291,25 @@ function bindMoneyInputs() {
             }
 
             if (document.querySelector('[data-wallet-page="withdraw"]')) {
+
                 updateWithdrawSummary();
+
+                if (input.id === 'withdraw-amount') {
+
+                    const amount = toNumber(input.value);
+
+                    if (amount > getWalletBalance()) {
+
+                        setError(
+                            'withdraw-amount',
+                            '*Số tiền rút vượt quá số dư hiện có'
+                        );
+
+                    } else {
+
+                        clearError('withdraw-amount');
+                    }
+                }
             }
         });
     });
@@ -320,6 +387,13 @@ function bindTransfer() {
         updateTransferSummary();
         openModal('transfer-pin-modal');
     });
+    document.getElementById('transfer-account')
+    ?.addEventListener('input', (e) => {
+
+        e.target.value =
+                e.target.value.replace(/\D/g, '');
+
+});
 
     updateTransferSummary();
 }

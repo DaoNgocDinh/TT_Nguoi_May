@@ -463,6 +463,7 @@ select {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-bottom: 18px;
 }
 
 .field.centered {
@@ -570,6 +571,15 @@ select {
     color: #fff;
     font-size: 15px;
 }
+.primary-action {
+    background: var(--pink);
+}
+.primary-action:hover {
+    background: var(--pink-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgb(212 20 117 / 30%);
+}
+
 
 .primary-action.compact {
     width: 190px;
@@ -639,14 +649,29 @@ select {
 }
 
 .quick-amounts button {
-    min-width: 78px;
-    height: 26px;
-    border: 1px solid #777;
+    min-width: 90px;
+    height: 34px;
+
+    border: 2px solid var(--pink);
     border-radius: 8px;
-    background: #eee;
+
+    background: #fff;
+
+    font-weight: 600;
     cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+.quick-amounts button:hover {
+    background: var(--pink);
+    color: #fff;
+    border-color: var(--pink);
+    transform: translateY(-2px);
 }
 
+.quick-amounts button:active {
+    transform: scale(.96);
+}
 .wallet-balance {
     height: 34px;
     display: flex;
@@ -681,17 +706,36 @@ select {
     background: #eee;
     padding: 0 12px;
     cursor: pointer;
-    text-align: left;
+    transition: all .25s ease;
+}
+.bank-list button:hover {
+    background: #fff4f8;
+}
+.bank-icon {
+    color: var(--pink);
+    font-size: 16px;
 }
 
 .bank-list button.selected {
     background: #ffe6f2;
+    border-left: 4px solid var(--pink);
 }
 
 .bank-list .add-bank-link {
     display: flex;
     color: var(--danger);
     font-weight: 900;
+}
+.vcb-icon{
+    color:#00a651;
+}
+
+.tcb-icon{
+    color:#e60012;
+}
+
+.mb-icon{
+    color:#004b8d;
 }
 
 .green {
@@ -863,8 +907,9 @@ select {
 
 .modal-actions .primary-action,
 .modal-actions .secondary-action {
+    width: 140px;
+    height: 40px;
     margin-top: 0;
-    height: 36px;
 }
 
 .add-bank-panel {

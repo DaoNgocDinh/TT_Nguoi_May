@@ -20,7 +20,7 @@
                     <div>
                         <div class="wallet-balance">
                             <span><i class="fa-regular fa-credit-card"></i> Ví ĐTY</span>
-                            <strong>Số dư: 5.000.000đ</strong>
+                            <strong id = "wallet-balance" data-balance = "5000000">Số dư: 5.000.000đ</strong>
                         </div>
 
                         <label class="field money-field">
@@ -52,9 +52,23 @@
                         </label>
 
                         <div class="bank-list" id="withdraw-bank-list">
-                            <button type="button" data-bank="Vietcombank ***1234"><i class="fa-solid fa-shield-halved green"></i><span>Vietcombank</span><strong>***1234</strong></button>
-                            <button type="button" data-bank="Techcombank ***5678"><i class="fa-solid fa-diamond red"></i><span>Techcombank</span><strong>***5678</strong></button>
-                            <button type="button" data-bank="MB Bank ***9876"><i class="fa-solid fa-star red"></i><span>MB Bank</span><strong>***9876</strong></button>
+                            <button type="button" data-bank="Vietcombank ***1234">
+                                <i class="fa-solid fa-shield-halved vcb-icon"></i>
+                                <span>Vietcombank</span>
+                                <strong>***1234</strong>
+                            </button>
+
+                            <button type="button" data-bank="Techcombank ***5678">
+                                <i class="fa-solid fa-diamond tcb-icon"></i>
+                                <span>Techcombank</span>
+                                <strong>***5678</strong>
+                            </button>
+
+                            <button type="button" data-bank="MB Bank ***9876">
+                                <i class="fa-solid fa-star mb-icon"></i>
+                                <span>MB Bank</span>
+                                <strong>***9876</strong>
+                            </button>
                             <button class="add-bank-link" id="open-add-bank" type="button"><i class="fa-solid fa-circle-plus"></i> Thêm tài khoản mới</button>
                         </div>
                     </div>

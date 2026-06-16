@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <title></title>
 </head>
 
@@ -29,96 +32,140 @@
             </button>
 
             <div class="flex gap-6">
-
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/ChuyenTien.png') }}" class="w-[43px] h-[43px]">
+                <a href="#">
+                    <div
+                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        <div class="h-[45px] flex items-center">
+                            <img src="{{ asset('images/icons/ChuyenTien.png') }}"
+                                data-normal="{{ asset('images/icons/ChuyenTien.png') }}"
+                                data-hover="{{ asset('images/icons/ChuyenTienhover.png') }}"
+                                class="service-icon w-[43px] h-[43px]">
+                        </div>
+                        <span class="service-text text-[18px] text-center leading-tight">
+                            Chuyển<br>tiền
+                        </span>
                     </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Chuyển<br>tiền
-                    </span>
-                </div>
+                </a>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/NapTien.png') }}" class="w-[43px] h-[43px]">
+                <a href="#">
+                    <div
+                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        <div class="h-[45px] flex items-center">
+                            <img src="{{ asset('images/icons/NapTien.png') }}"
+                                data-normal="{{ asset('images/icons/NapTien.png') }}"
+                                data-hover="{{ asset('images/icons/NapTienhover.png') }}"
+                                class="service-icon w-[43px] h-[43px]">
+                        </div>
+                        <span class="service-text text-[18px] text-center leading-tight">
+                            Nạp tiền
+                        </span>
                     </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Nạp tiền
-                    </span>
-                </div>
+                </a>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/RutTien.png') }}" class="w-[43px] h-[43px]">
+                <a href="#">
+                    <div
+                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        <div class="h-[45px] flex items-center">
+                            <img src="{{ asset('images/icons/RutTien.png') }}"
+                                data-normal="{{ asset('images/icons/RutTien.png') }}"
+                                data-hover="{{ asset('images/icons/RutTienhover.png') }}"
+                                class="service-icon w-[43px] h-[43px]">
+                        </div>
+                        <span class="service-text text-[18px] text-center leading-tight">
+                            Rút tiền
+                        </span>
                     </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Rút tiền
-                    </span>
-                </div>
+                </a>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/ThanhToanHoaDon.png') }}" class="w-[43px] h-[43px]">
+                <a href="#">
+                    <div
+                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        <div class="h-[45px] flex items-center">
+                            <img src="{{ asset('images/icons/ThanhToanHoaDon.png') }}"
+                                data-normal="{{ asset('images/icons/ThanhToanHoaDon.png') }}"
+                                data-hover="{{ asset('images/icons/ThanhToanHoaDonhover.png') }}"
+                                class="service-icon w-[43px] h-[43px]">
+                        </div>
+                        <span class="service-text text-[18px] text-center leading-tight">
+                            Thanh<br>toán
+                        </span>
                     </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Thanh<br>toán
-                    </span>
-                </div>
+                </a>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/ChiTieu.png') }}" class="w-[43px] h-[43px]">
+                <a href="{{ route('quanlychitieu') }}">
+                    <div
+                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        <div class="h-[45px] flex items-center">
+                            <img src="{{ asset('images/icons/ChiTieu.png') }}"
+                                data-normal="{{ asset('images/icons/ChiTieu.png') }}"
+                                data-hover="{{ asset('images/icons/ChiTieuhover.png') }}"
+                                class="service-icon w-[43px] h-[43px]">
+                        </div>
+                        <span class="service-text text-[18px] text-center leading-tight">
+                            Quản lý<br>chi tiêu
+                        </span>
                     </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Quản lý<br>chi tiêu
-                    </span>
-                </div>
+                </a>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/Hitory_money.png') }}" class="w-[43px] h-[43px]">
+                <a href="#">
+                    <div
+                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        <div class="h-[45px] flex items-center">
+                            <img src="{{ asset('images/icons/Hitory_money.png') }}"
+                                data-normal="{{ asset('images/icons/Hitory_money.png') }}"
+                                data-hover="{{ asset('images/icons/Hitory_moneyhover.png') }}"
+                                class="service-icon w-[43px] h-[43px]">
+                        </div>
+                        <span class="service-text text-[18px] text-center leading-tight">
+                            Lịch sử<br>giao dịch
+                        </span>
                     </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Lịch sử<br>giao dịch
-                    </span>
-                </div>
+                </a>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/Money_Phone.png') }}" class="w-[43px] h-[43px]">
+                <a href="#">
+                    <div
+                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        <div class="h-[45px] flex items-center">
+                            <img src="{{ asset('images/icons/Money_Phone.png') }}"
+                                data-normal="{{ asset('images/icons/Money_Phone.png') }}"
+                                data-hover="{{ asset('images/icons/Money_Phonehover.png') }}"
+                                class="service-icon w-[43px] h-[43px]">
+                        </div>
+                        <span class="service-text text-[18px] text-center leading-tight">
+                            Nạp tiền<br>điện thoại
+                        </span>
                     </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Nạp tiền<br>điện thoại
-                    </span>
-                </div>
+                </a>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/QlyQuy.png') }}" class="w-[43px] h-[43px]">
+                <a href="/QuanLyQuy">
+                    <div
+                        class="service-card {{ request()->is('QuanLyQuy') ? 'service-card-active' : '' }} w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        <div class="h-[45px] flex items-center">
+                            <img src="{{ request()->is('QuanLyQuy') ? asset('images/icons/QlyQuyhover.png') : asset('images/icons/QlyQuy.png') }}"
+                                data-normal="{{ asset('images/icons/QlyQuy.png') }}"
+                                data-hover="{{ asset('images/icons/QlyQuyhover.png') }}"
+                                class="service-icon w-[43px] h-[43px]">
+                        </div>
+                        <span class="service-text text-[18px] text-center leading-tight">
+                            Quản lý<br>quỹ
+                        </span>
                     </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Quản lý<br>quỹ
-                    </span>
-                </div>
+                </a>
 
-                <div
-                    class="w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3">
-                    <div class="h-[45px] flex items-center">
-                        <img src="{{ asset('images/icons/HuChiTieu.png') }}" class="w-[43px] h-[43px]">
+                <a href="{{ route('huchitieu') }}">
+                    <div
+                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        <div class="h-[45px] flex items-center">
+                            <img src="{{ asset('images/icons/HuChiTieu.png') }}"
+                                data-normal="{{ asset('images/icons/HuChiTieu.png') }}"
+                                data-hover="{{ asset('images/icons/HuChiTieuhover.png') }}"
+                                class="service-icon w-[43px] h-[43px]">
+                        </div>
+                        <span class="service-text text-[18px] text-center leading-tight">
+                            Hũ chi<br>tiêu
+                        </span>
                     </div>
-                    <span class="text-[18px] text-center leading-tight">
-                        Hũ chi<br>tiêu
-                    </span>
-                </div>
+                </a>
 
             </div>
 
@@ -132,3 +179,57 @@
 </body>
 
 </html>
+
+<style>
+    .service-card {
+        transition: all .3s ease;
+    }
+
+    .service-card:hover,
+    .service-card-active {
+        background: #D91773;
+        box-shadow: 0 12px 24px rgba(217, 23, 115, .35);
+    }
+
+    .service-card:hover .service-text,
+    .service-card-active .service-text {
+        color: white;
+    }
+
+    .service-text {
+        transition: color .3s ease;
+    }
+
+    .service-icon {
+        transition: all .3s ease;
+    }
+</style>
+
+<script>
+    document.querySelectorAll('.service-card').forEach(card => {
+
+        const img = card.querySelector('.service-icon');
+
+        card.addEventListener('mouseenter', () => {
+            img.src = img.dataset.hover;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            img.src = img.dataset.normal;
+        });
+
+    });
+    document.querySelectorAll('.service-card').forEach(card => {
+
+        const img = card.querySelector('.service-icon');
+
+        card.addEventListener('mouseenter', () => {
+            img.src = img.dataset.hover;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            img.src = img.dataset.normal;
+        });
+
+    });
+</script>

@@ -156,7 +156,7 @@
 
                 <a href="/hu-chi-tieu">
                     <div
-                         class="service-card {{ request()->is('hu-chi-tieu') ? 'service-card-active' : '' }} w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        class="service-card {{ request()->is('hu-chi-tieu') ? 'service-card-active' : '' }} w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
                         <div class="h-[45px] flex items-center">
                             <img src="{{ request()->is('hu-chi-tieu') ? asset('images/icons/HuChiTieuhover.png') : asset('images/icons/HuChiTieu.png') }}"
                                 data-normal="{{ asset('images/icons/HuChiTieu.png') }}"
@@ -231,6 +231,26 @@
 
         card.addEventListener('mouseleave', () => {
             img.src = img.dataset.normal;
+        });
+
+    });
+
+    document.querySelectorAll('.service-card').forEach(card => {
+
+        const img = card.querySelector('.service-icon');
+
+        card.addEventListener('mouseenter', () => {
+            img.src = img.dataset.hover;
+        });
+
+        card.addEventListener('mouseleave', () => {
+
+            if (card.classList.contains('service-card-active')) {
+                img.src = img.dataset.hover;
+            } else {
+                img.src = img.dataset.normal;
+            }
+
         });
 
     });

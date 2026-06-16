@@ -9,12 +9,8 @@
     <title>Document</title>
 </head>
 
+
 <body>
-
-</body>
-
-</html>
-
 <nav class="h-[80px] bg-white shadow-lg">
     <div class="h-full px-8 flex items-center justify-between">
 
@@ -51,3 +47,7 @@
 
     </div>
 </nav>
+</body>
+
+</html>
+

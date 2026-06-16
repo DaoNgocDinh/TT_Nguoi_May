@@ -130,3 +130,57 @@
 </body>
 
 </html>
+
+<style>
+    .service-card {
+        transition: all .3s ease;
+    }
+
+    .service-card:hover,
+    .service-card-active {
+        background: #D91773;
+        box-shadow: 0 12px 24px rgba(217, 23, 115, .35);
+    }
+
+    .service-card:hover .service-text,
+    .service-card-active .service-text {
+        color: white;
+    }
+
+    .service-text {
+        transition: color .3s ease;
+    }
+
+    .service-icon {
+        transition: all .3s ease;
+    }
+</style>
+
+<script>
+    document.querySelectorAll('.service-card').forEach(card => {
+
+        const img = card.querySelector('.service-icon');
+
+        card.addEventListener('mouseenter', () => {
+            img.src = img.dataset.hover;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            img.src = img.dataset.normal;
+        });
+
+    });
+    document.querySelectorAll('.service-card').forEach(card => {
+
+        const img = card.querySelector('.service-icon');
+
+        card.addEventListener('mouseenter', () => {
+            img.src = img.dataset.hover;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            img.src = img.dataset.normal;
+        });
+
+    });
+</script>

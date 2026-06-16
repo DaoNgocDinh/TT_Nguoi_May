@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\QuyController;
 
 Route::view('/', 'welcome');
 Route::view('/thanh-toan-hoa-don', 'ThanhToanHoaDon.index');
@@ -34,3 +35,5 @@ Route::get('/global_layout/header', function () {
 Route::get('/global_layout/body', function () {
     return view('global_layout.body');
 });
+
+Route::get('/QuanLyQuy', [QuyController::class, 'index']);

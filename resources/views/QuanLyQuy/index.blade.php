@@ -35,6 +35,84 @@
 
             <a class="text-black"></a>Cập nhật vị trí không thành công. Hãy thử lại sau ít phút</a>
         </div>
+        <div id="toast-leave-fund"
+            class="fixed top-4 right-4 hidden px-4 py-2 rounded-lg bg-white text-[#81FF73] text-[16px] shadow-lg z-[999] flex items-center gap-2">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-[39px]">
+                <path fill-rule="evenodd"
+                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                    clip-rule="evenodd" />
+            </svg>
+
+            <span class="text-black">
+                Đã rời quỹ thành công!
+            </span>
+        </div>
+        <div id="toast-leave-fund-error"
+            class="fixed top-4 right-4 hidden px-4 py-2 rounded-lg bg-white text-[#E7000B] text-[16px] shadow-lg z-[999] flex items-center gap-2">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-[39px]">
+                <path fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                    clip-rule="evenodd" />
+            </svg>
+
+            <span class="text-black">
+                Rời quỹ không thành công. Vui lòng thử lại sau.
+            </span>
+        </div>
+        <div id="toast-reject-success"
+            class="fixed top-4 right-4 hidden px-4 py-2 rounded-lg bg-white text-[#81FF73] text-[16px] shadow-lg z-[999] flex items-center gap-2">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-[39px]">
+                <path fill-rule="evenodd"
+                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                    clip-rule="evenodd" />
+            </svg>
+
+            <span class="text-black">
+                Đã từ chối yêu cầu thành công!
+            </span>
+        </div>
+        <div id="toast-reject-error"
+            class="fixed top-4 right-4 hidden px-4 py-2 rounded-lg bg-white text-[#E7000B] text-[16px] shadow-lg z-[999] flex items-center gap-2">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-[39px]">
+                <path fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                    clip-rule="evenodd" />
+            </svg>
+
+            <span class="text-black">
+                Từ chối yêu cầu không thành công. Vui lòng thử lại sau.
+            </span>
+        </div>
+        <div id="toast-delete-success"
+            class="fixed top-4 right-4 hidden px-4 py-2 rounded-lg bg-white text-[#81FF73] text-[16px] shadow-lg z-[999] flex items-center gap-2">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-[39px]">
+                <path fill-rule="evenodd"
+                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                    clip-rule="evenodd" />
+            </svg>
+
+            <span class="text-black">
+                Đã xóa quỹ thành công!
+            </span>
+        </div>
+        <div id="toast-delete-error"
+            class="fixed top-4 right-4 hidden px-4 py-2 rounded-lg bg-white text-[#E7000B] text-[16px] shadow-lg z-[999] flex items-center gap-2">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-[39px]">
+                <path fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                    clip-rule="evenodd" />
+            </svg>
+
+            <span class="text-black">
+                Xóa quỹ không thành công. Vui lòng thử lại sau.
+            </span>
+        </div>
         <div class=" grid-container max-w-[1500px] mx-auto grid grid-cols-4 gap-8 justify-items-center">
             @foreach ($quys as $quy)
                 @if(in_array($quy['trangThaiQuy'], ['active', 'kick']))
@@ -217,7 +295,7 @@
                                 <div class="flex justify-center gap-4 mt-4">
 
                                     <button
-                                        class="flex w-[99px] h-[38px] rounded-full border-2 border-[#FC0005] bg-[#FFFFFF] text-[#FC0005] text-[18px] items-center justify-center transition-all duration-200 hover:bg-[#FC0005] hover:text-white hover:shadow-md cursor-pointer">
+                                        class="deleteFundBtn flex w-[99px] h-[38px] rounded-full border-2 border-[#FC0005] bg-[#FFFFFF] text-[#FC0005] text-[18px] items-center justify-center transition-all duration-200 hover:bg-[#FC0005] hover:text-white hover:shadow-md cursor-pointer">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="size-[18px]">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -238,7 +316,162 @@
 
     @include('global_layout.footer')
 
+    <div id="leaveFundModal" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50">
+
+        <!-- Box -->
+        <div class="w-[472px] h-[194px] bg-white border-2 border-[#D42A87] rounded-[24px] flex flex-col">
+
+            <!-- Nội dung -->
+            <div class="flex flex-1 items-center px-6 gap-4">
+
+                <!-- Ảnh cảnh báo -->
+                <img src="{{ asset('images/icons/warning1.png') }}" alt="" class="w-[84px] h-[84px] object-contain">
+
+                <!-- Text -->
+                <p class="text-[18px] text-center leading-[1.3]">
+                    <span class="font-bold">Lưu ý:</span>
+                    Bạn có muốn rời quỹ không?<br>
+                    Tiền trong quỹ bạn đã góp<br>
+                    sẽ không được hoàn trả
+                </p>
+
+            </div>
+
+            <div class="flex justify-center gap-8 pb-5">
+
+                <button id="backBtn" class="w-[126px] h-[38px] rounded-full
+                border-2 border-[#D42A87]
+                bg-[#D42A87]
+                text-white text-[18px]
+                transition-all duration-300">
+                    Quay lại
+                </button>
+
+                <button id="confirmBtn" class="w-[126px] h-[38px] rounded-full
+                border-2 border-[#D42A87]
+                bg-white
+                text-[#D42A87]
+                text-[18px]
+                transition-all duration-300">
+                    Xác nhận
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="deleteFundModal" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50">
+
+        <div class="w-[472px] h-[194px] bg-white border-2 border-[#D42A87] rounded-[24px] flex flex-col">
+
+            <div class="flex flex-1 items-center px-6 gap-4">
+
+                <img src="{{ asset('images/icons/warning1.png') }}" class="w-[84px] h-[84px] object-contain">
+
+                <p class="text-[18px] text-center leading-[1.3]">
+                    <span class="font-bold">Lưu ý:</span>
+
+                    Khi xóa ở trạng thái bị đóng,<br>
+
+                    dữ liệu về quỹ sẽ bị xóa<br>
+
+                    mãi mãi.
+                </p>
+
+            </div>
+
+            <div class="flex justify-center gap-8 pb-5">
+
+                <button id="deleteBackBtn" class="w-[126px] h-[38px] rounded-full border-2 border-[#D42A87]
+    bg-[#D42A87] text-white text-[18px]
+    transition-all duration-300">
+                    Quay lại
+                </button>
+
+                <button id="deleteConfirmBtn" class="w-[126px] h-[38px] rounded-full border-2 border-[#D42A87]
+    bg-white text-[#D42A87] text-[18px]
+    transition-all duration-300">
+                    Xác nhận
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
+
+<script>
+    const modal = document.getElementById("leaveFundModal");
+
+    const confirmBtn = document.getElementById("confirmBtn");
+    const backBtn = document.getElementById("backBtn");
+    let selectedFundCard = null;
+    let leaveFundSuccessOnce = false;
+
+    document.querySelectorAll(".acceptBtn").forEach(btn => {
+
+        btn.addEventListener("click", () => {
+
+            selectedFundCard = btn.closest('.fund-card');
+
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+
+        });
+
+    });
+
+    backBtn.addEventListener("click", () => {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+    });
+
+    confirmBtn.addEventListener("click", () => {
+
+        if (!leaveFundSuccessOnce) {
+
+            if (selectedFundCard) {
+
+                selectedFundCard.remove();
+
+                showLeaveFundToast();
+
+                leaveFundSuccessOnce = true;
+            }
+
+        } else {
+
+            showLeaveFundErrorToast();
+
+        }
+
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+
+        selectedFundCard = null;
+    });
+    confirmBtn.addEventListener("mouseenter", () => {
+
+        confirmBtn.classList.remove("bg-white", "text-[#D42A87]");
+        confirmBtn.classList.add("bg-[#D42A87]", "text-white");
+
+        backBtn.classList.remove("bg-[#D42A87]", "text-white");
+        backBtn.classList.add("bg-white", "text-[#D42A87]");
+    });
+
+    confirmBtn.addEventListener("mouseleave", () => {
+
+        confirmBtn.classList.remove("bg-[#D42A87]", "text-white");
+        confirmBtn.classList.add("bg-white", "text-[#D42A87]");
+
+        backBtn.classList.remove("bg-white", "text-[#D42A87]");
+        backBtn.classList.add("bg-[#D42A87]", "text-white");
+    });
+</script>
 
 <script>
     let currentStatus = 'kick';
@@ -338,7 +571,7 @@
     });
     document.addEventListener('click', (e) => {
 
-        const btn = e.target.closest('.move-left'); // nút ngược chiều
+        const btn = e.target.closest('.move-left');
         if (!btn) return;
 
         const card = btn.closest('.w-\\[275px\\]');
@@ -347,10 +580,8 @@
         const cards = Array.from(parent.children);
         const index = cards.indexOf(card);
 
-        // ❌ nếu là card đầu tiên thì thôi
         if (index <= 0) return;
 
-        // 🔁 swap với thằng bên trái
         const prevCard = cards[index - 1];
 
         parent.insertBefore(card, prevCard);
@@ -358,26 +589,176 @@
     });
 
     let selectedCard = null;
+    let rejectSuccessOnce = false;
+
+    const deleteModal =
+        document.getElementById("deleteFundModal");
+
+    const deleteBackBtn =
+        document.getElementById("deleteBackBtn");
+
+    const deleteConfirmBtn =
+        document.getElementById("deleteConfirmBtn");
+
+    let selectedDeleteCard = null;
+    let deleteSuccessOnce = false;
+
+    document.querySelectorAll('.deleteFundBtn')
+        .forEach(btn => {
+
+            btn.addEventListener('click', () => {
+
+                selectedDeleteCard =
+                    btn.closest('.fund-card');
+
+                deleteModal.classList.remove('hidden');
+                deleteModal.classList.add('flex');
+
+            });
+
+        });
+
+    deleteBackBtn.addEventListener('click', () => {
+
+        deleteModal.classList.add('hidden');
+        deleteModal.classList.remove('flex');
+
+    });
+
+    deleteConfirmBtn.addEventListener("mouseenter", () => {
+
+        deleteConfirmBtn.classList.remove(
+            "bg-white",
+            "text-[#D42A87]"
+        );
+
+        deleteConfirmBtn.classList.add(
+            "bg-[#D42A87]",
+            "text-white"
+        );
+
+        deleteBackBtn.classList.remove(
+            "bg-[#D42A87]",
+            "text-white"
+        );
+
+        deleteBackBtn.classList.add(
+            "bg-white",
+            "text-[#D42A87]"
+        );
+
+    });
+
+    deleteConfirmBtn.addEventListener("mouseleave", () => {
+
+        deleteConfirmBtn.classList.remove(
+            "bg-[#D42A87]",
+            "text-white"
+        );
+
+        deleteConfirmBtn.classList.add(
+            "bg-white",
+            "text-[#D42A87]"
+        );
+
+        deleteBackBtn.classList.remove(
+            "bg-white",
+            "text-[#D42A87]"
+        );
+
+        deleteBackBtn.classList.add(
+            "bg-[#D42A87]",
+            "text-white"
+        );
+
+    });
+
+    function showDeleteSuccessToast() {
+
+        const toast =
+            document.getElementById('toast-delete-success');
+
+        toast.classList.remove('hidden');
+
+        setTimeout(() => {
+            toast.classList.add('hidden');
+        }, 2500);
+    }
+
+    function showDeleteErrorToast() {
+
+        const toast =
+            document.getElementById('toast-delete-error');
+
+        toast.classList.remove('hidden');
+
+        setTimeout(() => {
+            toast.classList.add('hidden');
+        }, 2500);
+    }
+
+    deleteConfirmBtn.addEventListener('click', () => {
+
+        if (!deleteSuccessOnce) {
+
+            if (selectedDeleteCard) {
+
+                selectedDeleteCard.remove();
+
+                showDeleteSuccessToast();
+
+                deleteSuccessOnce = true;
+            }
+
+        } else {
+
+            showDeleteErrorToast();
+        }
+
+        deleteModal.classList.add('hidden');
+        deleteModal.classList.remove('flex');
+
+        selectedDeleteCard = null;
+    });
+
+    document.querySelectorAll('.rejectBtn').forEach(btn => {
+
+        btn.addEventListener('click', () => {
+
+            const fundCard = btn.closest('.fund-card');
+
+            if (!rejectSuccessOnce) {
+
+                fundCard.remove();
+
+                showRejectSuccessToast();
+
+                rejectSuccessOnce = true;
+
+            } else {
+
+                showRejectErrorToast();
+
+            }
+
+        });
+
+    });
 
     document.addEventListener('click', (e) => {
 
-        // ======================
-        // 1. CHỌN CARD (chỉ qua nút swap)
-        // ======================
         const btn = e.target.closest('.swap-btn');
         if (btn) {
 
             const card = btn.closest('.grid-card');
             if (!card) return;
 
-            // toggle chọn lại = huỷ
             if (selectedCard === card) {
                 btn.classList.remove('active-swap-btn');
                 selectedCard = null;
                 return;
             }
 
-            // bỏ cái cũ
             document.querySelectorAll('.swap-btn')
                 .forEach(b => b.classList.remove('active-swap-btn'));
 
@@ -389,9 +770,6 @@
             return;
         }
 
-        // ======================
-        // 2. CLICK CARD B → SWAP
-        // ======================
         if (!selectedCard) return;
 
         const targetCard = e.target.closest('.grid-card');
@@ -399,7 +777,6 @@
 
         const parent = selectedCard.parentElement;
 
-        // ===== SWAP THẬT SỰ =====
         const placeholder = document.createElement('div');
         parent.insertBefore(placeholder, selectedCard);
 
@@ -474,6 +851,47 @@
 
     function showErrorToast() {
         const toast = document.getElementById("toast-error");
+
+        toast.classList.remove("hidden");
+
+        setTimeout(() => {
+            toast.classList.add("hidden");
+        }, 2500);
+    }
+    function showLeaveFundToast() {
+
+        const toast = document.getElementById("toast-leave-fund");
+
+        toast.classList.remove("hidden");
+
+        setTimeout(() => {
+            toast.classList.add("hidden");
+        }, 2500);
+    }
+    function showLeaveFundErrorToast() {
+
+        const toast = document.getElementById("toast-leave-fund-error");
+
+        toast.classList.remove("hidden");
+
+        setTimeout(() => {
+            toast.classList.add("hidden");
+        }, 2500);
+    }
+    function showRejectSuccessToast() {
+
+        const toast = document.getElementById("toast-reject-success");
+
+        toast.classList.remove("hidden");
+
+        setTimeout(() => {
+            toast.classList.add("hidden");
+        }, 2500);
+    }
+
+    function showRejectErrorToast() {
+
+        const toast = document.getElementById("toast-reject-error");
 
         toast.classList.remove("hidden");
 

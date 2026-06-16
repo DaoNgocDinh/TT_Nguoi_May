@@ -85,10 +85,8 @@
                             <tbody class="divide-y divide-[#E8E8E5] bg-white">
                                         @foreach ($transactions as $transaction)
                                             <tr class="hover:bg-[#F7F7F7] cursor-pointer transaction-row" role="button"
-                                                data-id="{{ $transaction['id'] }}"
-                                                data-status="{{ $transaction['status'] }}"
-                                                @if(isset($transaction['errorMessage'])) data-error="{{ $transaction['errorMessage'] }}" @endif
-                                            >
+                                            data-url="{{ url('/lich-su-giao-dich/'.$transaction['id']) }}"
+                                        >
                                         <td class="px-6 py-5 align-top">
                                             <div class="inline-flex items-center gap-2 rounded-3xl px-3 py-2 text-sm font-semibold {{ $transaction['bgColor'] }} {{ $transaction['iconColor'] }}">
                                                 <i class="fa-solid {{ $transaction['icon'] }}"></i>
@@ -119,56 +117,12 @@
                     @endif
                 </div>
 
-                <!-- Error modal -->
-                <div id="error-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40">
-                    <div class="w-full max-w-md rounded-xl bg-white p-6 text-center shadow-xl">
-                        <div class="flex flex-col items-center gap-4">
-                            <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#FFF0F2] text-2xl text-[#D10852]">
-                                <i class="fa-solid fa-circle-exclamation"></i>
-                            </div>
-                            <h3 class="text-lg font-semibold">Đã xảy ra lỗi</h3>
-                            <p id="error-message" class="text-sm text-[#6B6B68]">Không thể tải lịch sử giao dịch. Vui lòng thử lại</p>
-                            <div class="mt-2 flex w-full gap-3">
-                                <button id="retry-btn" class="flex-1 rounded-full bg-[#A0185F] px-4 py-2 text-white">Thử lại</button>
-                                <button id="close-btn" class="flex-1 rounded-full border border-[#E5E5E5] px-4 py-2">Đóng</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {
-                        var currentFailedId = null;
-
                         document.querySelectorAll('.transaction-row').forEach(function (row) {
-                            row.addEventListener('click', function (e) {
-                                var status = row.getAttribute('data-status');
-                                var id = row.getAttribute('data-id');
-                                if (status === 'Thất bại') {
-                                    currentFailedId = id;
-                                    var msg = row.getAttribute('data-error') || 'Không thể tải lịch sử giao dịch. Vui lòng thử lại';
-                                    document.getElementById('error-message').textContent = msg;
-                                    document.getElementById('error-modal').classList.remove('hidden');
-                                    document.getElementById('error-modal').classList.add('flex');
-                                } else {
-                                    // navigate to detail page for non-failed rows
-                                    window.location.href = '/lich-su-giao-dich/' + id;
-                                }
+                            row.addEventListener('click', function () {
+                                window.location.href = row.getAttribute('data-url');
                             });
-                        });
-
-                        document.getElementById('close-btn').addEventListener('click', function () {
-                            currentFailedId = null;
-                            document.getElementById('error-modal').classList.add('hidden');
-                            document.getElementById('error-modal').classList.remove('flex');
-                        });
-
-                        document.getElementById('retry-btn').addEventListener('click', function () {
-                            if (currentFailedId) {
-                                window.location.href = '/lich-su-giao-dich/' + currentFailedId;
-                            } else {
-                                window.location.reload();
-                            }
                         });
                     });
                 </script>

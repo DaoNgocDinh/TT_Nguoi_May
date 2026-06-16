@@ -240,5 +240,5 @@ Route::get('/lich-su-giao-dich/{id}', function (int $id) {
         abort(404);
     }
 
-    return view('LichSuGiaoDich.show', compact('transaction'));
+    return view()->file(resource_path('views/LichSuGiaoDich/show.blade.php'), compact('transaction'));
 });

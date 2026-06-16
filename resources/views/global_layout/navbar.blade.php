@@ -19,8 +19,10 @@
     <div class="h-full px-8 flex items-center justify-between">
 
         <div class="flex items-center gap-4">
-            <img src="{{ asset('images/logo_bgr_pink.jpg') }}" alt="Logo"
-                class="h-[70px] w-[70px] border-2 border-[#707070] rounded-md">
+            <a href="/global_layout/body">
+                <img src="{{ asset('images/logo_bgr_pink.jpg') }}" alt="Logo"
+                    class="h-[70px] w-[70px] border-2 border-[#707070] rounded-md">
+            </a>
 
             <div class="flex items-center gap-6 ml-8">
                 <a class="text-lg font-bold text-black">Dịch vụ</a>

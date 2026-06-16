@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('global_layout.body')
 
 @section('title', 'Chuyển tiền - Ví điện tử ĐTY')
 

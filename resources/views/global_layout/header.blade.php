@@ -111,9 +111,9 @@
 
                 <a href="/lich-su-giao-dich">
                     <div
-                        class="service-card w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
+                        class="service-card {{ request()->is('lich-su-giao-dich') ? 'service-card-active' : '' }} w-[100px] h-[100px] bg-white rounded-2xl shadow-lg flex flex-col items-center pt-3 cursor-pointer">
                         <div class="h-[45px] flex items-center">
-                            <img src="{{ asset('images/icons/Hitory_money.png') }}"
+                            <img src="{{ request()->is('lich-su-giao-dich') ? asset('images/icons/Hitory_moneyhover.png') : asset('images/icons/Hitory_money.png') }}"
                                 data-normal="{{ asset('images/icons/Hitory_money.png') }}"
                                 data-hover="{{ asset('images/icons/Hitory_moneyhover.png') }}"
                                 class="service-icon w-[43px] h-[43px]">

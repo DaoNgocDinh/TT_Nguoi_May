@@ -28,7 +28,7 @@
 body.wallet-shell {
     min-height: 100vh;
     margin: 0;
-    background: #f3f3f3;
+    background: #fff;
     color: #111;
     font-family: "Segoe UI", Tahoma, Arial, sans-serif;
     font-size: 14px;
@@ -42,12 +42,20 @@ select {
 }
 
 .site-frame {
-    width: min(1260px, calc(100vw - 48px));
-    margin: 28px auto;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
     background: #fff;
-    border: 2px solid #222;
+    border: 0;
+}
+.site-frame {
+    display: flex;
+    flex-direction: column;
 }
 
+.site-frame main {
+    flex: 1;
+}
 .top-nav {
     height: 68px;
     display: flex;

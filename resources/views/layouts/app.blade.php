@@ -5,7 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Ví điện tử ĐTY')</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <style>
+        {!! preg_replace(
+            [
+                "/@import\s+'tailwindcss';\s*/",
+                "/@source\s+[^;]+;\s*/",
+                "/@theme\s*\{[\s\S]*?\}\s*/",
+            ],
+            '',
+            file_get_contents(resource_path('css/app.css'))
+        ) !!}
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
@@ -20,6 +30,9 @@
 
         @include('global_layout.footer')
     </div>
+    <script>
+    {!! file_get_contents(resource_path('js/wallet.js')) !!}
+</script>
 </body>
 
 </html>

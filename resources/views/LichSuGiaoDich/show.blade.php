@@ -3,6 +3,7 @@
 @section('content')
 @php
     $statusColor = $transaction['status'] === 'Thành công' ? 'bg-[#E8F8EF] text-[#0F7A32]' : 'bg-[#FFE7EB] text-[#D10852]';
+    $amountColor = str_starts_with($transaction['amount'], '+') ? 'text-[#167A39]' : 'text-[#D10852]';
 @endphp
 
 <div class="min-h-[calc(100vh-160px)] bg-[#F3F1F1] py-8 px-4 sm:px-6 lg:px-10">
@@ -21,7 +22,7 @@
                 </span>
                 <div class="space-y-2">
                     <p class="text-sm uppercase tracking-[0.26em] text-white/80">{{ $transaction['type'] }}</p>
-                    <h1 class="text-5xl font-semibold tracking-[-0.03em] text-white">{{ $transaction['amount'] }}</h1>
+                    <h1 class="text-5xl font-semibold tracking-[-0.03em] text-white {{ $amountColor }}">{{ $transaction['amount'] }}</h1>
                     <span class="inline-flex rounded-full bg-white/15 px-5 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-white">{{ $transaction['status'] }}</span>
                 </div>
             </div>
@@ -69,7 +70,7 @@
                 <div class="mt-6 space-y-5 text-sm text-[#4B4B47]">
                     <div class="grid gap-1 sm:grid-cols-[160px_1fr] items-center">
                         <span class="text-xs uppercase tracking-[0.18em] text-[#7D7D78]">Số tiền giao dịch</span>
-                        <span class="font-semibold text-[#1B1B18] text-right">{{ $transaction['amount'] }}</span>
+                        <span class="font-semibold text-right {{ $amountColor }}">{{ $transaction['amount'] }}</span>
                     </div>
                     <div class="grid gap-1 sm:grid-cols-[160px_1fr] items-center">
                         <span class="text-xs uppercase tracking-[0.18em] text-[#7D7D78]">Phí giao dịch</span>

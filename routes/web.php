@@ -83,7 +83,7 @@ function generateTransactions(): array
         };
         $feeAmount = mt_rand(0, 2) === 0 ? 0 : 10000 * mt_rand(1, 3);
 
-        $isFailed = mt_rand(1, 100) > 80; // 80% Thành công, 20% Thất bại
+        $isFailed = $i <= 50; // 50/100 giao dịch giả lập bị lỗi
 
         $items[] = [
             'id' => $i,

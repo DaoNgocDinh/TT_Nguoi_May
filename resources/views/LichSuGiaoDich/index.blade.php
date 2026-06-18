@@ -86,6 +86,7 @@
                                         @foreach ($transactions as $transaction)
                                             <tr class="hover:bg-[#F7F7F7] cursor-pointer transaction-row" role="button"
                                             data-url="{{ url('/lich-su-giao-dich/'.$transaction['id']) }}"
+                                            data-error-message="{{ $transaction['errorMessage'] ?? '' }}"
                                         >
                                         <td class="px-6 py-5 align-top">
                                             <div class="inline-flex items-center gap-2 rounded-3xl px-3 py-2 text-sm font-semibold {{ $transaction['bgColor'] }} {{ $transaction['iconColor'] }}">
@@ -109,7 +110,8 @@
                                                 <span class="inline-flex rounded-full bg-[#E8F8EF] px-3 py-1 text-xs font-semibold text-[#0F7A32]">{{ $transaction['status'] }}</span>
                                             @endif
                                         </td>
-                                        <td class="px-6 py-5 align-top text-right font-semibold text-[#1B1B18]">{{ $transaction['amount'] }}</td>
+                                        @php $amountColor = str_starts_with($transaction['amount'], '+') ? 'text-[#167A39]' : 'text-[#D10852]'; @endphp
+                                        <td class="px-6 py-5 align-top text-right font-semibold {{ $amountColor }}">{{ $transaction['amount'] }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -117,12 +119,55 @@
                     @endif
                 </div>
 
+                <div id="transaction-error-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 px-4 py-6">
+                    <div class="w-full max-w-sm rounded-[30px] bg-white p-6 text-center shadow-2xl">
+                        <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#F9E5E8] bg-[#FFF2F4] text-3xl text-[#D10852]">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </div>
+                        <p class="mt-5 text-xl font-semibold text-[#1B1B18]">Đã xảy ra lỗi</p>
+                        <p id="transaction-error-message" class="mt-2 text-sm leading-6 text-[#6B6B68]">Không thể tải lịch sử giao dịch. Vui lòng thử lại</p>
+                        <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
+                            <button id="retry-transaction-btn" type="button" class="inline-flex w-full items-center justify-center rounded-full bg-[#A0185F] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#8D1453]">Thử lại</button>
+                            <button id="close-transaction-error-btn" type="button" class="inline-flex w-full items-center justify-center rounded-full border border-[#E5E5E5] bg-white px-6 py-3 text-sm font-semibold text-[#1B1B18] transition hover:bg-[#F7F7F7]">Đóng</button>
+                        </div>
+                    </div>
+                </div>
+
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {
+                        const errorModal = document.getElementById('transaction-error-modal');
+                        const errorMessageNode = document.getElementById('transaction-error-message');
+                        const retryButton = document.getElementById('retry-transaction-btn');
+                        const closeButton = document.getElementById('close-transaction-error-btn');
+                        let retryUrl = null;
+
                         document.querySelectorAll('.transaction-row').forEach(function (row) {
                             row.addEventListener('click', function () {
-                                window.location.href = row.getAttribute('data-url');
+                                const errorMessage = row.dataset.errorMessage?.trim();
+                                const url = row.dataset.url;
+
+                                if (errorMessage) {
+                                    retryUrl = url;
+                                    errorMessageNode.textContent = errorMessage;
+                                    errorModal.classList.remove('hidden');
+                                    errorModal.classList.add('flex');
+                                    return;
+                                }
+
+                                window.location.href = url;
                             });
+                        });
+
+                        retryButton.addEventListener('click', function () {
+                            if (retryUrl) {
+                                window.location.href = retryUrl;
+                            }
+                        });
+
+                        closeButton.addEventListener('click', function () {
+                            retryUrl = null;
+                            errorModal.classList.add('hidden');
+                            errorModal.classList.remove('flex');
                         });
                     });
                 </script>

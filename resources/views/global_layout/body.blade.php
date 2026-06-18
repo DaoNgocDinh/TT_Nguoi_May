@@ -6,6 +6,10 @@
         @yield('content')
     </main>
 
+    <script>
+        {!! file_get_contents(resource_path('js/wallet.js')) !!}
+    </script>
+    
     @include('global_layout.footer')
 
 </body>

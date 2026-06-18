@@ -20,7 +20,7 @@
                     <div>
                         <div class="wallet-balance">
                             <span><i class="fa-regular fa-credit-card"></i> Ví ĐTY</span>
-                            <strong>Số dư: 5.000.000đ</strong>
+                            <strong id = "wallet-balance" data-balance = "5000000">Số dư: 5.000.000đ</strong>
                         </div>
 
                         <label class="field money-field">

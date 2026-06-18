@@ -1,7 +1,7 @@
 <div class="modal hidden" id="{{ $id }}" role="dialog" aria-modal="true">
     <div class="modal-panel pin-panel">
         <button class="modal-close" type="button" data-close-modal="{{ $id }}" aria-label="Đóng">×</button>
-        <i class="fa-regular fa-credit-card modal-icon blue"></i>
+        <i class="fa-solid fa-shield-halved modal-icon blue"></i>
         <h3>Nhập mã PIN</h3>
         <div class="pin-inputs" data-pin-group>
             @for ($i = 0; $i < 6; $i++)

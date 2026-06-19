@@ -46,7 +46,6 @@
             <div class="bg-slate-50 px-8 py-6 sm:px-10 sm:py-8 border-t border-gray-200 sm:flex sm:items-center sm:justify-between gap-4">
                 <div>
                     <p class="text-sm font-semibold text-gray-700">Đã thanh toán</p>
-                    <p class="mt-1 text-base text-gray-500">Số tiền đã trừ khỏi tài khoản của bạn.</p>
                 </div>
                 <div class="mt-4 sm:mt-0 text-right">
                     <p class="text-3xl font-bold text-[#A0185F]">390.000đ</p>

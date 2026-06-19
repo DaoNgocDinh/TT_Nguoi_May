@@ -36,9 +36,6 @@
                         <p class="text-xs text-gray-500 mt-2">Chỉ nhập số, không có dấu cách. Ví dụ: 0912345678</p>
                     </div>
 
-                    <div class="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-                        <p class="text-sm text-blue-700"><i class="fas fa-info-circle mr-2"></i>Nhập số điện thoại đúng định dạng để tiếp tục.</p>
-                    </div>
 
                     <div class="space-y-3">
                         <button type="submit" class="block w-full px-6 py-3 bg-gradient-to-r from-[#A0185F] to-[#8B1550] text-white rounded-lg font-semibold hover:shadow-lg transition">
@@ -92,9 +89,6 @@
                     </div>
                 </div>
 
-                <a href="#" class="block w-full px-4 py-3 bg-white text-[#A0185F] rounded-lg font-semibold hover:bg-gray-100 transition text-center">
-                    <i class="fas fa-plus mr-2"></i>Mua Data
-                </a>
             </div>
         </div>
     </div>

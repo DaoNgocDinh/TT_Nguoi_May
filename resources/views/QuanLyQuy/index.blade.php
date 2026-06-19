@@ -339,6 +339,14 @@
 
             <div class="flex justify-center gap-8 pb-5">
 
+                <button id="backBtn" class="w-[126px] h-[38px] rounded-full
+                border-2 border-[#D42A87]
+                bg-[#D42A87]
+                text-white !text-[20px]
+                transition-all duration-300">
+                    Quay lại
+                </button>
+
                 <button id="confirmBtn" class="w-[126px] h-[38px] rounded-full
                 border-2 border-[#D42A87]
                 bg-white
@@ -346,14 +354,6 @@
                 !text-[20px]
                 transition-all duration-300">
                     Xác nhận
-                </button>
-
-                <button id="backBtn" class="w-[126px] h-[38px] rounded-full
-                border-2 border-[#D42A87]
-                bg-[#D42A87]
-                text-white !text-[20px]
-                transition-all duration-300">
-                    Quay lại
                 </button>
 
             </div>
